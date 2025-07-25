@@ -363,6 +363,31 @@ export default function Dashboard() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Download Project */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Download className="mr-2 h-5 w-5 text-green-600" />
+                  Tải source code
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600 mb-4">
+                  Tải toàn bộ source code chatbot để triển khai trên server riêng
+                </p>
+                <Button 
+                  className="w-full bg-green-600 hover:bg-green-700"
+                  onClick={() => window.open('/download', '_blank')}
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Tải file facebook-gift-bot.tar.gz
+                </Button>
+                <div className="mt-3 text-xs text-gray-500">
+                  File chứa: Source code + Hướng dẫn setup + Mã code mẫu
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Management Panel */}

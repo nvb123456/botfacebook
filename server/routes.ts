@@ -236,6 +236,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Download route for project files
+  app.get("/download", async (req, res) => {
+    try {
+      const filePath = "/home/runner/workspace/facebook-gift-bot.tar.gz";
+      res.download(filePath, "facebook-gift-bot.tar.gz", (err) => {
+        if (err) {
+          console.error("Download error:", err);
+          res.status(500).send("Error downloading file");
+        }
+      });
+    } catch (error) {
+      console.error("Download error:", error);
+      res.status(500).send("Error downloading file");
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
