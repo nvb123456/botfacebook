@@ -25,6 +25,17 @@ FACEBOOK_VERIFY_TOKEN=your_verify_token_123
 ```
 
 ### 3. Chạy ứng dụng
+
+**Trên Windows:**
+```bash
+# Cách 1: Sử dụng file .bat
+start-windows.bat
+
+# Cách 2: Chạy bằng lệnh
+set NODE_ENV=development && tsx server/index.ts
+```
+
+**Trên Linux/Mac:**
 ```bash
 npm run dev
 ```
@@ -39,7 +50,7 @@ npm run dev
 
 1. **Tạo Facebook App:**
    - Vào https://developers.facebook.com
-   - Tạo ứng dụng mới → chọn "Business"
+   - Tạo ứng dụng mới → chọn "Business"      
    - Thêm sản phẩm "Messenger"
 
 2. **Cấu hình Webhook:**
@@ -96,6 +107,20 @@ Truy cập giao diện quản lý để:
 - Cập nhật thông điệp bot
 - Xem preview tin nhắn bot
 
+## Khắc phục lỗi Windows
+
+**Lỗi: 'NODE_ENV' is not recognized as an internal or external command**
+
+Giải pháp:
+1. Sử dụng file `start-windows.bat` đã cung cấp
+2. Hoặc chạy: `set NODE_ENV=development && tsx server/index.ts`
+3. Cài đặt cross-env: `npm install cross-env` (đã có sẵn)
+
+**Lỗi npm audit**
+```bash
+npm audit fix
+```
+
 ## Lưu ý quan trọng
 
 1. **File codes.txt**: Mã code sẽ được lấy từ dòng đầu tiên và xóa sau khi gửi
@@ -110,6 +135,7 @@ Nếu có lỗi, kiểm tra:
 - Webhook URL có truy cập được không
 - Fanpage đã subscribe ứng dụng chưa
 - Có mã code trong hệ thống không
+- Trên Windows: Sử dụng start-windows.bat
 
 ## Cấu trúc dự án
 
