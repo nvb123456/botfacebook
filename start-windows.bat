@@ -1,5 +1,9 @@
 @echo off
 echo Khoi chay Facebook Gift Code Bot...
+echo Dang cai dat dependencies...
+call npm install
+echo.
+echo Dang khoi chay server...
 set NODE_ENV=development
-tsx server/index.ts
+npx tsx server/index.ts
 pause

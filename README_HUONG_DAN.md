@@ -28,11 +28,15 @@ FACEBOOK_VERIFY_TOKEN=your_verify_token_123
 
 **Trên Windows:**
 ```bash
-# Cách 1: Sử dụng file .bat
+# Cách 1: Tự động (khuyến khích)
+run.cmd
+
+# Cách 2: Sử dụng file .bat
 start-windows.bat
 
-# Cách 2: Chạy bằng lệnh
-set NODE_ENV=development && tsx server/index.ts
+# Cách 3: Manual
+npm install
+set NODE_ENV=development && npx tsx server/index.ts
 ```
 
 **Trên Linux/Mac:**
