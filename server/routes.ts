@@ -239,7 +239,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Download route for project files
   app.get("/download", async (req, res) => {
     try {
-      const filePath = "/home/runner/workspace/facebook-gift-bot-keep-alive.tar.gz";
+      const filePath = "/home/runner/workspace/facebook-gift-bot-deploy.tar.gz";
       res.download(filePath, "facebook-gift-bot.tar.gz", (err) => {
         if (err) {
           console.error("Download error:", err);
