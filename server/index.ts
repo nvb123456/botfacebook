@@ -67,5 +67,23 @@ app.use((req, res, next) => {
     reusePort: true,
   }, () => {
     log(`serving on port ${port}`);
+    console.log(`========================================`);
+    console.log(`  FACEBOOK GIFT CODE BOT DANG HOAT DONG`);
+    console.log(`========================================`);
+    console.log(`Giao dien quan ly: http://localhost:${port}`);
+    console.log(`Webhook URL: http://localhost:${port}/api/webhook`);
+    console.log(`Nhan Ctrl+C de dung server...`);
+    console.log(`========================================`);
+  });
+
+  // Keep server alive
+  process.on('SIGINT', () => {
+    console.log('\nDang dung server...');
+    process.exit(0);
+  });
+
+  process.on('SIGTERM', () => {
+    console.log('\nServer da dung.');
+    process.exit(0);
   });
 })();

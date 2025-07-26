@@ -38,6 +38,18 @@ npm install drizzle-orm zod
 - Cài đặt lại dependencies
 - Bật lại antivirus sau khi hoàn tất
 
+## Lỗi: Bot chạy xong và tắt ngay
+
+### Nguyên nhân:
+- Server khởi động nhưng bị crash do lỗi code
+- Thiếu dependencies quan trọng
+- Port 5000 đã được sử dụng bởi ứng dụng khác
+
+### Giải pháp:
+1. **Sử dụng start-server.bat** - File sẽ tự động khởi động lại khi crash
+2. **Kiểm tra port khác**: Thay đổi PORT=3000 trong file .env
+3. **Chạy check-setup.bat** để kiểm tra cài đặt
+
 ## Chạy bot mà không cần cài đặt đầy đủ
 
 ### Tối thiểu cần thiết:
